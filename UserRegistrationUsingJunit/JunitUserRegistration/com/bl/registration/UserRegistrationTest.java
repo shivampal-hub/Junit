@@ -15,11 +15,18 @@ public class UserRegistrationTest {
         System.out.println("Before");
     }
 
-    @Test
-    public void testValidFirstName_thenTrue() {
+   @Test
+    public void testValidFirstNameFirstLetterCapital_thenTrue() {
 
-        System.out.println("Test : Valid First Name");
+        System.out.println("Test : Valid First Name With First Letter Capital");
         Assert.assertTrue(registration.isValidFirstName("Shivam"));
+    }
+
+    @Test
+    public void testValidFirstNameFirstLetterCapitalMinThreeChar_thenTrue() {
+
+        System.out.println("Test : Valid First Name With First Letter Capital and min Three Char");
+        Assert.assertTrue(registration.isValidFirstName("Shi"));
     }
 
 }
